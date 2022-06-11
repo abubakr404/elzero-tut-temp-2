@@ -1,0 +1,34 @@
+<template>
+  <div class="container">
+    <ul>
+      <li><img src="../assets/images/logo.svg" alt="logo" /></li>
+      <li>
+        Product
+        <ul>
+          <li><button>Overview</button></li>
+          <li><button>Pricing</button></li>
+          <li><button>Marketplace</button></li>
+          <li><button>Features</button></li>
+          <li><button>Integrations</button></li>
+        </ul>
+      </li>
+      <li>
+        Company
+        <ul>
+          <li><button>About</button></li>
+          <li><button>Team</button></li>
+          <li><button>Blog</button></li>
+          <li><button>Careers</button></li>
+        </ul>
+      </li>
+      <li>
+        Connect
+        <ul>
+          <li><button>Contact</button></li>
+          <li><button>Newsletter</button></li>
+          <li><button>LinkedIn</button></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</template>

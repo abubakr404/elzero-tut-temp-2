@@ -1,0 +1,89 @@
+header {
+  position: absolute;
+  z-index: 1;
+  @include hPCenter;
+  width: 100%;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    @include in(toSmall) {
+      padding: 3.5rem 1.5rem;
+    }
+    &:after {
+      @include line($white, 0.0625rem, bottom, 100%, 2rem, 0);
+      z-index: -1;
+    }
+  }
+  .logo {
+    img {
+      height: 2.5rem;
+    }
+  }
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: $white;
+      @extend %transition;
+      font-size: 0.875rem;
+      padding: 2rem 0.5rem;
+    }
+    button {
+      font-size: 1rem;
+      color: $white;
+      @extend %buttonRest;
+      @extend %fCenter;
+      gap: 0.5rem;
+    }
+    button.buger-button {
+      display: none;
+      border: none;
+      background-color: transparent;
+      @include in(toSmall) {
+        display: block;
+      }
+    }
+    ul {
+      @extend %ulRest;
+      display: flex;
+      gap: 2rem;
+      @include in(toSmall) {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+    li {
+      a:hover,
+      a:focus,
+      &.active a {
+        color: $mainColor;
+        border-bottom: 0.0625rem solid $mainColor;
+      }
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 8rem;
+      @include in(toSmall) {
+        flex-direction: column;
+        position: absolute;
+        right: 1.5rem;
+        top: 80%;
+        width: calc(100% - 3rem);
+        padding: 2rem;
+        border-radius: 0.3125rem;
+        background-color: $white;
+        box-shadow: 0 0 0.625rem 0 #4848485c;
+        &.hide {
+          display: none;
+        }
+      }
+    }
+  }
+}

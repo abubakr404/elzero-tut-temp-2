@@ -1,35 +1,49 @@
-# template_2
+# frontend-mentor-challenge-22
 
-This template should help get you started developing with Vue 3 in Vite.
+frontend-mentor-challenge the link https://abubakr404.github.io/frontend-mentor-challenge-22/
 
-## Recommended IDE Setup
+# Frontend Mentor - Blogr landing page solution
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Customize configuration
+## Table of contents
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-## Project Setup
+## Overview
 
-```sh
-npm install
-```
+### The challenge
 
-### Compile and Hot-Reload for Development
+Users should be able to:
 
-```sh
-npm run dev
-```
+- See hover states for interactive elements
 
-### Compile and Minify for Production
+### Screenshot
 
-```sh
-npm run build
-```
+![](./public/iscreenshot.jpg)
 
-### Lint with [ESLint](https://eslint.org/)
+### Links
 
-```sh
-npm run lint
-```
+- Live Site URL: [live site URL here](https://abubakr404.github.io/frontend-mentor-challenge-22/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- SASS
+- [Vue](https://vuejs.org/) - vue.js framework
+
+## Author
+
+- Frontend Mentor - [@abubakr404](https://www.frontendmentor.io/profile/abubakr404)

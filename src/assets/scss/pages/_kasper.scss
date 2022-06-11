@@ -1,0 +1,59 @@
+%transition {
+  transition: 0.3s;
+}
+
+%sectionPadding {
+  padding: {
+    top: 4rem;
+    bottom: 4rem;
+  }
+}
+%fCenter {
+  @include fCenter;
+}
+%aCenter {
+  @include aCenter;
+}
+%ulRest {
+  @include ulRest;
+}
+%buttonRest {
+  @include buttonRest;
+}
+
+section:not(.landing) {
+  max-width: 90rem;
+  padding: 9rem 0;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  @include in(toSmall) {
+    padding: 6rem 0;
+    text-align: center;
+  }
+}
+.buttons {
+  @extend %fCenter;
+  gap: 2rem;
+}
+%primaryButton {
+  @extend %fCenter;
+  @extend %transition;
+  opacity: 1;
+  background-color: $white;
+  color: $altColor;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 3em;
+  width: 8.5rem;
+  height: 2.7rem;
+  &:hover {
+    text-decoration: none;
+    color: $white;
+  }
+}
+@import "../layout/header";
+@import "./components/landing";
+@import "./components/home";
+@import "../layout/footer";

@@ -1,0 +1,40 @@
+footer {
+  color: $white;
+  padding: 4.5rem 0;
+  @include in(toSmall) {
+    font-weight: bold;
+    text-align: center;
+  }
+  button {
+    @extend %buttonRest;
+    &:focus,
+    &:active,
+    &:hover {
+      text-decoration: underline;
+    }
+    font-size: 0.95rem;
+    @include in(toSmall) {
+      font-size: 1rem;
+    }
+  }
+  ul {
+    @extend %ulRest;
+  }
+  .container {
+    > ul {
+      @include responGridCol(16rem, 4rem 2rem);
+      @include in(toMedium) {
+        justify-items: center;
+        gap: 3rem 2rem;
+      }
+      > li {
+        ul {
+          margin-top: 2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+}
