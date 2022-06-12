@@ -28,12 +28,12 @@
             </button>
           </li>
         </ul>
-        <div class="search">
-          <form method="GET" v-show="toggleSearch">
-            <input type="search" />
-          </form>
-          <button>| <i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
+      </div>
+      <div class="search">
+        <form method="GET" v-show="toggleSearch">
+          <input type="search" />
+        </form>
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </nav>
   </div>

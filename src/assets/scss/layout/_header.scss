@@ -1,16 +1,13 @@
 header {
   position: absolute;
-  z-index: 1;
-  @include hPCenter;
   width: 100%;
+  z-index: 2;
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    @include in(toSmall) {
-      padding: 3.5rem 1.5rem;
-    }
+    min-height: 5.25rem;
     &:after {
       @include line($white, 0.0625rem, bottom, 100%, 2rem, 0);
       z-index: -1;
@@ -19,6 +16,22 @@ header {
   .logo {
     img {
       height: 2.5rem;
+    }
+  }
+  .search {
+    button {
+      height: 2.5rem;
+      width: 3rem;
+      position: relative;
+      margin-left: 2rem;
+      border-left: 0.0625rem solid $white;
+      @include fCenter;
+      justify-content: end;
+    }
+    i {
+      color: $white;
+      font-size: 1.5rem;
+      // right: 0;
     }
   }
   nav {
@@ -32,6 +45,10 @@ header {
       @extend %transition;
       font-size: 0.875rem;
       padding: 2rem 0.5rem;
+      @include in(toSmall) {
+        padding: 1rem 0.5rem;
+        width: 100%;
+      }
     }
     button {
       font-size: 1rem;
@@ -53,8 +70,8 @@ header {
       display: flex;
       gap: 2rem;
       @include in(toSmall) {
+        gap: 0rem;
         width: 100%;
-        align-items: center;
         flex-direction: column;
       }
     }
@@ -65,21 +82,27 @@ header {
         color: $mainColor;
         border-bottom: 0.0625rem solid $mainColor;
       }
+      button {
+        @include in(toSmall) {
+          gap: 0rem;
+          width: 100%;
+          text-align: start;
+        }
+      }
     }
     .menu {
       display: flex;
       align-items: center;
-      gap: 8rem;
+      gap: 4rem;
       @include in(toSmall) {
         flex-direction: column;
         position: absolute;
-        right: 1.5rem;
-        top: 80%;
-        width: calc(100% - 3rem);
-        padding: 2rem;
+        top: calc(100% + 2.5rem);
+        width: calc(100% - 2rem);
+        padding: 1rem;
         border-radius: 0.3125rem;
-        background-color: $white;
-        box-shadow: 0 0 0.625rem 0 #4848485c;
+        background-color: #1f2021fa;
+        box-shadow: 0 0 0.3125rem 0.0625rem rgb(0 199 252 / 72%);
         &.hide {
           display: none;
         }
