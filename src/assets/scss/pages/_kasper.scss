@@ -8,6 +8,12 @@
     bottom: 4rem;
   }
 }
+%hPCenter {
+  @include hPCenter;
+}
+%vPCenter {
+  @include vPCenter;
+}
 %fCenter {
   @include fCenter;
 }

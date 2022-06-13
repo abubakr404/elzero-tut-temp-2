@@ -1,59 +1,75 @@
 .landing {
-  height: 73.6vh;
+  min-height: 100vh;
   position: relative;
-  background-color: $backgroundColor;
-  .container {
-    text-align: center;
-    margin-bottom: 1rem;
-    @extend %aCenter;
-    color: $white;
+  color: $white;
+  background: {
+    color: $backgroundColor;
+    image: url(/src/assets/images/landing_1.jpg);
+    size: cover;
+    repeat: no-repeat;
+  }
+  &::after {
+    content: "";
+    @include overlay;
+  }
+  .text {
+    position: absolute;
+    @extend %vPCenter;
+    width: 55%;
+    background-color: rgba($altBackgroundColor, 0.7);
+    padding: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
     @include in(toSmall) {
-      right: 15%;
-      transform: translate(7.5%, 50%);
+      width: 100%;
+      justify-content: center;
+    }
+    .content {
+      max-width: 35.5rem;
     }
   }
-  .buttons {
-    @extend %aCenter;
-    bottom: -50%;
-    gap: 1rem;
-    button {
-      @extend %buttonRest;
-      @extend %primaryButton;
-      &:last-of-type {
-        background-color: transparent;
-        color: $white;
-        border: 0.0625rem solid $white;
-        &:hover {
-          background-color: $white;
-          color: $altColor;
-        }
-      }
-    }
-  }
-  h1 {
-    color: $white;
-    font-size: 3.7rem;
-    @include in(medium) {
-      font-size: 2.7rem;
-    }
-    @include in(toSmall) {
-      font-size: 2rem;
-      line-height: 1.3;
-      margin-bottom: 0.5rem;
-    }
+  h2 {
+    color: inherit;
+    font-size: 1.875rem;
+    font-weight: 400;
   }
   p {
-    font-size: 1.25rem;
-    opacity: 0.8;
-    @include in(medium) {
-      font-size: 1.2rem;
+    margin: 1.5rem 0;
+    line-height: 2;
+  }
+  button.arrow {
+    position: absolute;
+    z-index: 2;
+    padding: 1rem 1.875rem;
+    font-size: 2rem;
+    @extend %vPCenter;
+    &:nth-of-type(2) {
+      right: 0;
     }
     @include in(toSmall) {
-      font-size: 1.125rem;
-      line-height: 1.4;
+      display: none;
     }
   }
-  @include in(toSmall) {
-    height: 110vh;
+  .bullet {
+    z-index: 2;
+    position: absolute;
+    @extend %hPCenter;
+    @extend %ulRest;
+    bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    li {
+      @extend %transition;
+      width: 0.875rem;
+      height: 0.875rem;
+      border: 0.0625rem solid $white;
+      border-radius: 50%;
+      cursor: pointer;
+      &.active {
+        background-color: $mainColor;
+        border-color: $mainColor;
+      }
+    }
   }
 }

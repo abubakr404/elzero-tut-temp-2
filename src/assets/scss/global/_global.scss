@@ -1,4 +1,4 @@
-// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 *,
 :after,
 :before {
@@ -18,7 +18,7 @@ body {
   // background-color: $backgroundColor;
   line-height: 1.7;
   font-family: $fontFamily;
-  font-size: 1rem;
+  font-size: 0.8125rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,6 +54,10 @@ h4,
 h5,
 h6 {
   color: $headingsColor;
+}
+button {
+  @extend %buttonRest;
+  cursor: pointer;
 }
 img.mobile {
   @include showIn(toSmall);

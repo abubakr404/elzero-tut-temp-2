@@ -43,18 +43,17 @@ header {
       text-decoration: none;
       color: $white;
       @extend %transition;
-      font-size: 0.875rem;
       padding: 2rem 0.5rem;
+      font-weight: 600;
       @include in(toSmall) {
         padding: 1rem 0.5rem;
         width: 100%;
       }
     }
     button {
-      font-size: 1rem;
       color: $white;
-      @extend %buttonRest;
       @extend %fCenter;
+      font-size: 0.8125rem;
       gap: 0.5rem;
     }
     button.buger-button {
@@ -93,7 +92,9 @@ header {
     .menu {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: 4rem;
+      flex: 6;
       @include in(toSmall) {
         flex-direction: column;
         position: absolute;
@@ -106,6 +107,14 @@ header {
         &.hide {
           display: none;
         }
+      }
+    }
+    .search {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      @include in(toSmall) {
+        flex: 0;
       }
     }
   }
