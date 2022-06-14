@@ -1,0 +1,21 @@
+.services {
+  // h3 {
+  //   font-size: 1.75rem;
+  //   margin-bottom: 1rem;
+  //   @include in(toSmall) {
+  //     font-size: 1.7rem;
+  //     line-height: 1.2;
+  //     margin-bottom: 1.5rem;
+  //   }
+  // }
+  .serv-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @extend %sectionPadding;
+    gap: 4.875rem 5.625rem;
+    @include in(toSmall) {
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+    }
+  }
+}

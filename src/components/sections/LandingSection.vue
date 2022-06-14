@@ -42,8 +42,6 @@ export default {
         { id: 0, name: "landing_1.jpg", isActive: false },
         { id: 1, name: "landing_2.jpg", isActive: false },
         { id: 2, name: "landing_3.jpg", isActive: false },
-        { id: 3, name: "landing_4.jpg", isActive: false },
-        { id: 4, name: "landing_5.jpg", isActive: false },
       ],
     };
   },

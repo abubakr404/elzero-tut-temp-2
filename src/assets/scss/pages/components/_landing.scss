@@ -13,30 +13,25 @@
     @include overlay;
   }
   .text {
-    position: absolute;
-    @extend %vPCenter;
-    width: 55%;
-    background-color: rgba($altBackgroundColor, 0.7);
-    padding: 3rem;
-    display: flex;
-    justify-content: flex-end;
-    z-index: 1;
-    @include in(toSmall) {
-      width: 100%;
-      justify-content: center;
-    }
+    @extend %boxCard;
+    width: 57%;
     .content {
       max-width: 35.5rem;
     }
   }
   h2 {
     color: inherit;
-    font-size: 1.875rem;
     font-weight: 400;
+    @include in(smallMobile) {
+      font-size: 1.125rem;
+    }
   }
   p {
     margin: 1.5rem 0;
     line-height: 2;
+    @include in(smallMobile) {
+      font-size: 0.625rem;
+    }
   }
   button.arrow {
     position: absolute;
@@ -61,10 +56,7 @@
     gap: 0.5rem;
     li {
       @extend %transition;
-      width: 0.875rem;
-      height: 0.875rem;
-      border: 0.0625rem solid $white;
-      border-radius: 50%;
+      @include circle(0.9375rem, 0.0625rem, $white);
       cursor: pointer;
       &.active {
         background-color: $mainColor;

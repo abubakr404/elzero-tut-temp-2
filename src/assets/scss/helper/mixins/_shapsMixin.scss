@@ -1,3 +1,21 @@
+// circle mixin is genral mixin can make circle with all size and fill in or out
+// the first @param $volume should be the size of circle
+// the second @param $borderSize should be the border size of circle
+// the third @param $backgroundColor should be the background color of circle
+// the fourth @param $borderColor should be the border color of circle
+
+@mixin circle(
+  $volume: 0.9375rem,
+  $borderSize: 0.0625rem,
+  $borderColor: black,
+  $backgroundColor: transparent
+) {
+  width: $volume;
+  height: $volume;
+  border-radius: 50%;
+  border: $borderSize solid $borderColor;
+  background-color: $backgroundColor;
+}
 // line mixin is genral mixin can make line in all direction and position
 // the first @param $color should be the color of line
 // the second @param $height should be the height of line
@@ -11,7 +29,7 @@
   $height: 0.0625rem,
   $direction: bottom,
   $width: 100%,
-  $padding: 0,
+  $padding: 0px,
   $offset: $padding
 ) {
   content: "";

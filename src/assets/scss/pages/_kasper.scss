@@ -7,6 +7,12 @@
     top: 4rem;
     bottom: 4rem;
   }
+  @include in(toSmall) {
+    padding: {
+      top: 2rem;
+      bottom: 2rem;
+    }
+  }
 }
 %hPCenter {
   @include hPCenter;
@@ -26,16 +32,28 @@
 %buttonRest {
   @include buttonRest;
 }
+%boxCard {
+  position: absolute;
+  @extend %vPCenter;
+  background-color: rgba($altBackgroundColor, 0.7);
+  padding: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+  @include in(toSmall) {
+    width: 100% !important;
+    justify-content: center;
+  }
+}
 
 section:not(.landing) {
   max-width: 90rem;
-  padding: 9rem 0;
+  padding: 6.25rem 0;
   margin: {
     left: auto;
     right: auto;
   }
   @include in(toSmall) {
-    padding: 6rem 0;
     text-align: center;
   }
 }
@@ -59,7 +77,8 @@ section:not(.landing) {
     color: $white;
   }
 }
+@import "./components/components";
 @import "../layout/header";
 @import "./components/landing";
-@import "./components/home";
+@import "./components/services";
 @import "../layout/footer";

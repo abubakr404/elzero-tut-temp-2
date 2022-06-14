@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <ul>
-      <li><img src="../assets/images/logo.svg" alt="logo" /></li>
+      <li><img src="../assets/images/logo.png" alt="logo" /></li>
       <li>
         Product
         <ul>
