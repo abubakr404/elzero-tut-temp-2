@@ -4,8 +4,8 @@
 
 %sectionPadding {
   padding: {
-    top: 4rem;
-    bottom: 4rem;
+    top: 6.25rem;
+    bottom: 6.25rem;
   }
   @include in(toSmall) {
     padding: {
@@ -32,6 +32,9 @@
 %buttonRest {
   @include buttonRest;
 }
+%overlay {
+  @include overlay;
+}
 %boxCard {
   position: absolute;
   @extend %vPCenter;
@@ -48,7 +51,7 @@
 
 section:not(.landing) {
   max-width: 90rem;
-  padding: 6.25rem 0;
+  @extend %sectionPadding;
   margin: {
     left: auto;
     right: auto;

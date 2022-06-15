@@ -10,7 +10,7 @@
   }
   &::after {
     content: "";
-    @include overlay;
+    @extend %overlay;
   }
   .text {
     @extend %boxCard;
