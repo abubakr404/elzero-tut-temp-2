@@ -5,7 +5,7 @@ import DesginFeatures from "./DesginFeatures.vue";
 </script>
 
 <template>
-  <section :class="heading.title" :id="heading.title">
+  <section :class="heading.name" :id="heading.name">
     <div class="container">
       <MainHeading>
         <template #title>{{ heading.title }}</template>
@@ -28,6 +28,7 @@ export default {
   data() {
     return {
       heading: {
+        name: "services",
         title: "services",
         text: `Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
         Mauris blandit aliquet elit, eget tincidunt.`,

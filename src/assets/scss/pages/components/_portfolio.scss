@@ -31,7 +31,22 @@
     .box {
       overflow: hidden;
       position: relative;
+      &::after {
+        content: "\2b";
+        position: absolute;
+        font-family: "Font Awesome 6 Pro";
+        @extend %transition;
+        @extend %fCenter;
+        @extend %aCenter;
+        @include circle(5.5rem, 0, $mainColor, rgba($mainColor, 0.7));
+        color: $altColor;
+        bottom: 120%;
+        font-size: 2rem;
+      }
       &:hover {
+        &::after {
+          bottom: calc(50% + 2rem);
+        }
         .caption {
           bottom: 0;
         }
@@ -43,7 +58,7 @@
     img {
       @extend %transition;
       display: block;
-      max-width: 100%;
+      width: 100%;
     }
     .caption {
       @extend %transition;
@@ -52,16 +67,6 @@
       bottom: -100%;
       width: 100%;
       padding: 0.725rem 1.25rem;
-      &::after {
-        content: "\2b";
-        font-family: "Font Awesome 6 Pro";
-        @extend %fCenter;
-        @extend %aCenter;
-        @include circle(5.5rem, 0, $mainColor, rgba($mainColor, 0.7));
-        color: $altColor;
-        bottom: 200%;
-        font-size: 2rem;
-      }
     }
     h4 {
       color: $altHeadingsColor;
@@ -85,6 +90,53 @@
     display: block;
     @include in(smallMobile) {
       font-size: 0.875rem;
+    }
+  }
+  .video {
+    position: relative;
+    background-color: $backgroundColor;
+    margin-top: $sectionPadding;
+    padding: 0;
+    video {
+      max-width: 100%;
+    }
+    .text {
+      @extend %boxCard;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      height: 65%;
+      max-height: 16.25rem;
+      width: 100%;
+      color: $altColor;
+      @include in(smallMobile) {
+        padding: 1rem;
+      }
+      h3 {
+        font-size: 2rem;
+        color: inherit;
+        font-weight: 400;
+        @include in(smallMobile) {
+          font-size: 1.25rem;
+        }
+      }
+      p {
+        @include in(smallMobile) {
+          font-size: 0.65rem;
+        }
+      }
+      a {
+        @extend %primaryButton;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 0.3em 3em;
+        background-color: $altHeadingsColor;
+        @include in(smallMobile) {
+          font-size: 0.65rem;
+        }
+      }
     }
   }
 }

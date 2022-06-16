@@ -1,21 +1,13 @@
 <template>
   <section
-    class="landing"
+    :class="heading.name"
     id="home"
     :style="'background-image:url(/src/assets/images/' + activeImg.name + ')'"
   >
     <div class="text">
       <div class="content">
-        <h2>
-          HELLO WORLD! <br />
-          WE ARE KASPER,WE MAKE ART.
-        </h2>
-        <p>
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-          Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur
-          aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris
-          blandit aliquet elit, eget tincidunt.
-        </p>
+        <h2>HELLO WORLD!<br />{{ heading.title }}</h2>
+        <p v-text="heading.text"></p>
       </div>
     </div>
     <button class="arrow" @click="activatePre">
@@ -39,6 +31,14 @@
 export default {
   data() {
     return {
+      heading: {
+        name: "landing",
+        title: `WE ARE KASPER,WE MAKE ART.`,
+        text: `Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+          Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur
+          aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris
+          blandit aliquet elit, eget tincidunt.`,
+      },
       images: [
         { id: 0, name: "landing_1.jpg", isActive: false },
         { id: 1, name: "landing_2.jpg", isActive: false },

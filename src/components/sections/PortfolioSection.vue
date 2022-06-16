@@ -1,10 +1,11 @@
 <script setup>
 import MainHeading from "./section-components/MainHeading.vue";
 import ImagesGallery from "./section-components/ImagesGallery.vue";
+import VideoSection from "./VideoSection.vue";
 </script>
 
 <template>
-  <section :class="heading.title" :id="heading.title">
+  <section :class="heading.name" :id="heading.name">
     <div class="container">
       <MainHeading>
         <template #title>{{ heading.title }}</template>
@@ -28,6 +29,7 @@ import ImagesGallery from "./section-components/ImagesGallery.vue";
       </ImagesGallery>
     </div>
     <a href="#" class="more">More</a>
+    <VideoSection />
   </section>
 </template>
 
@@ -36,6 +38,7 @@ export default {
   data() {
     return {
       heading: {
+        name: "portfolio",
         title: "portfolio",
         text: `Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
         Mauris blandit aliquet elit, eget tincidunt.`,
