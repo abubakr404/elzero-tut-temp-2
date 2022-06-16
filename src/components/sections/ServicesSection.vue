@@ -1,10 +1,11 @@
 <script setup>
 import ServiceItem from "./section-components/ServiceItem.vue";
 import MainHeading from "./section-components/MainHeading.vue";
+import DesginFeatures from "./DesginFeatures.vue";
 </script>
 
 <template>
-  <section class="services" id="services">
+  <section :class="heading.title" :id="heading.title">
     <div class="container">
       <MainHeading>
         <template #title>{{ heading.title }}</template>
@@ -18,24 +19,8 @@ import MainHeading from "./section-components/MainHeading.vue";
         </ServiceItem>
       </div>
     </div>
-    <section class="desgin" id="desgin">
-      <div class="images">
-        <img src="../../assets/images/black-phone.png" alt="" />
-        <img src="../../assets/images/white-phone.png" alt="" />
-      </div>
-      <div class="text">
-        <h3 v-text="serviceFeature.title"></h3>
-        <ul>
-          <li
-            v-for="(feature, index) in serviceFeature.features"
-            :key="index"
-            :style="'--icon: ' + feature.iconCode + ';'"
-            v-text="feature.text"
-          ></li>
-        </ul>
-      </div>
-    </section>
   </section>
+  <DesginFeatures />
 </template>
 
 <script>
@@ -46,15 +31,6 @@ export default {
         title: "services",
         text: `Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
         Mauris blandit aliquet elit, eget tincidunt.`,
-      },
-      serviceFeature: {
-        title: "OUR DESIGNS COMES WITH...",
-        features: [
-          { text: "Responsive Design", iconCode: "'\\f108'" },
-          { text: "Modern And Clean Design", iconCode: "'\\f108'" },
-          { text: "Clean Code", iconCode: "'\\f108'" },
-          { text: "Browser Friendly", iconCode: "'\\f108'" },
-        ],
       },
       services: [
         {

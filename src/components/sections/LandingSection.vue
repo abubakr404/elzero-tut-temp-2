@@ -1,6 +1,7 @@
 <template>
   <section
     class="landing"
+    id="home"
     :style="'background-image:url(/src/assets/images/' + activeImg.name + ')'"
   >
     <div class="text">

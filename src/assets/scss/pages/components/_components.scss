@@ -21,7 +21,7 @@
     &::after {
       content: "";
       position: absolute;
-      @include circle(0.875rem, 0.0625rem, $altHeadingsColor, $white);
+      @include circle(0.875rem, 0.0625rem, $altHeadingsColor, $altColor);
       @extend %aCenter;
       bottom: 0;
     }

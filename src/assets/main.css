@@ -102,17 +102,17 @@ h2 {
   font-size: 1.875rem;
 }
 
-.landing .bullet li, header nav a {
+.portfolio .images-container .caption, .portfolio .images-container img, .portfolio .shuffle li, .landing .bullet li, header nav a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.services .serv-container, section:not(.landing) {
+.desgin, .services .serv-container, section:not(.landing, .desgin) {
   padding-top: 6.25rem;
   padding-bottom: 6.25rem;
 }
 @media (max-width: 991px) {
-  .services .serv-container, section:not(.landing) {
+  .desgin, .services .serv-container, section:not(.landing, .desgin) {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
@@ -124,13 +124,13 @@ h2 {
           transform: translateX(50%);
 }
 
-.landing button.arrow, .services .desgin .text, .landing .text {
+.landing button.arrow, .desgin .text, .landing .text {
   bottom: 50%;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
 }
 
-header nav button, .buttons {
+.portfolio .images-container .caption::after, header nav button, .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,7 +142,7 @@ header nav button, .buttons {
           justify-content: center;
 }
 
-.main-heading h2::after {
+.portfolio .images-container .caption::after, .main-heading h2::after {
   position: absolute;
   right: 50%;
   bottom: 50%;
@@ -150,7 +150,7 @@ header nav button, .buttons {
           transform: translate(50%, 50%);
 }
 
-footer ul, .services .desgin .text ul, .landing .bullet, header nav ul {
+footer ul, .portfolio .shuffle, .desgin .text ul, .landing .bullet, header nav ul {
   list-style: none;
   padding: 0;
 }
@@ -163,7 +163,7 @@ footer button, button {
   background-color: transparent;
 }
 
-.services .desgin::before, .landing::after {
+.desgin::before, .landing::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -172,7 +172,7 @@ footer button, button {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.services .desgin .text, .landing .text {
+.desgin .text, .landing .text {
   position: absolute;
   background-color: rgba(15, 116, 143, 0.7);
   padding: 3rem;
@@ -185,7 +185,7 @@ footer button, button {
   z-index: 1;
 }
 @media (max-width: 991px) {
-  .services .desgin .text, .landing .text {
+  .desgin .text, .landing .text {
     width: 100% !important;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -193,19 +193,24 @@ footer button, button {
   }
 }
 
-section:not(.landing) {
+section:not(.landing, .desgin) {
   max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 991px) {
-  section:not(.landing) {
+  section:not(.landing, .desgin) {
     text-align: center;
   }
 }
 
 .buttons {
   gap: 2rem;
+}
+
+.portfolio .more, .portfolio .shuffle li.active {
+  background-color: #2ec5f4;
+  color: #ffffff;
 }
 
 .main-heading {
@@ -523,9 +528,24 @@ header nav .search {
   border-color: #2ec5f4;
 }
 
-.services .desgin {
+.services .serv-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5.625rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.875rem 5.625rem;
+}
+@media (max-width: 991px) {
+  .services .serv-container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+}
+
+.desgin {
   background-color: #1f2021;
-  background-image: url("/src/assets/images/landing_5.jpg");
+  background-image: url("/src/assets/images/desgin-feature-01.jpg");
   background-size: cover;
   background-attachment: fixed;
   display: -ms-grid;
@@ -537,30 +557,30 @@ header nav .search {
   overflow: hidden;
   position: relative;
 }
-.services .desgin::before {
+.desgin::before {
   content: "";
 }
 @media (max-width: 991px) {
-  .services .desgin {
+  .desgin {
     background-attachment: local;
   }
 }
-.services .desgin .images img:first-of-type {
+.desgin .images img:first-of-type {
   -webkit-transform: translate(45%, 2%);
           transform: translate(45%, 2%);
   z-index: 1;
   position: relative;
 }
-.services .desgin .images img:last-of-type {
+.desgin .images img:last-of-type {
   -webkit-transform: translate(0%, 2%);
           transform: translate(0%, 2%);
 }
 @media (max-width: 991px) {
-  .services .desgin .images img {
+  .desgin .images img {
     display: none;
   }
 }
-.services .desgin .text {
+.desgin .text {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -576,17 +596,34 @@ header nav .search {
   font-weight: 300;
   text-align: start;
 }
-.services .desgin .text h3 {
+@media (max-width: 576px) {
+  .desgin .text {
+    font-size: 0.875rem;
+  }
+}
+.desgin .text h3 {
   font-size: 1.3331rem;
   font-weight: 300;
   color: inherit;
   margin-bottom: 1.4rem;
 }
-.services .desgin .text ul li {
+@media (max-width: 576px) {
+  .desgin .text h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+.desgin .text ul li {
   padding: 0.3rem 3.25rem;
   position: relative;
 }
-.services .desgin .text ul li::before {
+@media (max-width: 576px) {
+  .desgin .text ul li {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+}
+.desgin .text ul li::before {
   content: var(--icon);
   font-family: "Font Awesome 6 Pro";
   font-weight: 900;
@@ -594,18 +631,97 @@ header nav .search {
   left: 0;
   bottom: 0.3125rem;
 }
-.services .serv-container {
+
+.portfolio .main-heading {
+  padding-bottom: 4.25rem;
+}
+.portfolio .shuffle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #1f2021;
+}
+.portfolio .shuffle li {
+  cursor: pointer;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+}
+@media (max-width: 576px) {
+  .portfolio .shuffle li {
+    font-size: 0.625rem;
+    padding: 0.625rem 0.875rem;
+  }
+}
+.portfolio .images-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 5.625rem 1fr;
-  grid-template-columns: 1fr 1fr;
-  gap: 4.875rem 5.625rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 0;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
-@media (max-width: 991px) {
-  .services .serv-container {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    row-gap: 3rem;
+.portfolio .images-container .box {
+  overflow: hidden;
+  position: relative;
+}
+.portfolio .images-container .box:hover .caption {
+  bottom: 0;
+}
+.portfolio .images-container .box:hover img {
+  -webkit-transform: scale(1.2) rotate(3deg);
+          transform: scale(1.2) rotate(3deg);
+}
+.portfolio .images-container img {
+  display: block;
+  max-width: 100%;
+}
+.portfolio .images-container .caption {
+  position: absolute;
+  background-color: #ffffff;
+  bottom: -100%;
+  width: 100%;
+  padding: 0.725rem 1.25rem;
+}
+.portfolio .images-container .caption::after {
+  content: "+";
+  font-family: "Font Awesome 6 Pro";
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  border: 0 solid #2ec5f4;
+  background-color: rgba(46, 197, 244, 0.7);
+  color: #ffffff;
+  bottom: 200%;
+  font-size: 2rem;
+}
+.portfolio .images-container h4 {
+  color: #1f2021;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.portfolio .images-container p {
+  color: #2ec5f4;
+}
+.portfolio .more {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0.3em 3em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  display: block;
+}
+@media (max-width: 576px) {
+  .portfolio .more {
+    font-size: 0.875rem;
   }
 }
 
