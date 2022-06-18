@@ -1,4 +1,5 @@
-.main-heading {
+.main-heading,
+.head {
   text-align: center;
   max-width: 28rem;
   margin: {
@@ -32,6 +33,25 @@
     padding: 0 2rem;
     width: 30rem;
     max-width: 100%;
+  }
+}
+
+.bullet {
+  z-index: 2;
+  position: absolute;
+  @extend %hPCenter;
+  @extend %ulRest;
+  bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  li {
+    @extend %transition;
+    @include circle(0.9375rem, 0.0625rem, $altColor);
+    cursor: pointer;
+    &.active {
+      background-color: $mainColor;
+      border-color: $mainColor;
+    }
   }
 }
 

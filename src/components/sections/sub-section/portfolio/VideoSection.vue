@@ -1,7 +1,7 @@
 <template>
   <section :class="heading.name" :id="heading.name">
     <video autoplay muted loop>
-      <source src="../../assets/images/place-holder.mov" />
+      <source src="../../../../assets/images/place-holder.mov" />
     </video>
     <div class="text">
       <h3 v-text="heading.title"></h3>

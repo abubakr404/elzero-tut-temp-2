@@ -40,6 +40,22 @@
   }
 }
 
+// mixin fCol is mixin for make flex and its direction is column and has option to make the align center
+
+@mixin fCol($align: stretch) {
+  display: flex;
+  flex-direction: column;
+  @if $align == stretch {
+    align-items: stretch;
+  } @else if $align == start {
+    align-items: flex-start;
+  } @else if $align == center {
+    align-items: center;
+  } @else if $align == end {
+    align-items: flex-end;
+  }
+}
+
 // mixin radiBox is mixin make the first element has radius border in two side and the last element
 // has two radius border in opsiet side
 // the prameter $radius for the value of the radius and the prameter $direction for the direction of box

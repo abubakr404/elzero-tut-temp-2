@@ -1,8 +1,8 @@
 <template>
   <section :class="heading.name" :id="heading.name">
     <div class="images">
-      <img src="../../assets/images/black-phone.png" alt="" />
-      <img src="../../assets/images/white-phone.png" alt="" />
+      <img src="../../../../assets/images/black-phone.png" alt="" />
+      <img src="../../../../assets/images/white-phone.png" alt="" />
     </div>
     <div class="text">
       <h3 v-text="heading.title"></h3>

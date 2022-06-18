@@ -50,12 +50,7 @@
 }
 
 section:not(.landing, .desgin) {
-  max-width: 90rem;
   @extend %sectionPadding;
-  margin: {
-    left: auto;
-    right: auto;
-  }
   @include in(toSmall) {
     text-align: center;
   }
@@ -73,4 +68,5 @@ section:not(.landing, .desgin) {
 @import "./components/landing";
 @import "./components/services";
 @import "./components/portfolio";
+@import "./components/about";
 @import "../layout/footer";

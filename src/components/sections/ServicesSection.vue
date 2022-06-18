@@ -1,7 +1,7 @@
 <script setup>
 import ServiceItem from "./section-components/ServiceItem.vue";
 import MainHeading from "./section-components/MainHeading.vue";
-import DesginFeatures from "./DesginFeatures.vue";
+import DesginFeatures from "./sub-section/services/DesginFeatures.vue";
 </script>
 
 <template>

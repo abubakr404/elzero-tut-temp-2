@@ -46,22 +46,4 @@
       display: none;
     }
   }
-  .bullet {
-    z-index: 2;
-    position: absolute;
-    @extend %hPCenter;
-    @extend %ulRest;
-    bottom: 1rem;
-    display: flex;
-    gap: 0.5rem;
-    li {
-      @extend %transition;
-      @include circle(0.9375rem, 0.0625rem, $altColor);
-      cursor: pointer;
-      &.active {
-        background-color: $mainColor;
-        border-color: $mainColor;
-      }
-    }
-  }
 }

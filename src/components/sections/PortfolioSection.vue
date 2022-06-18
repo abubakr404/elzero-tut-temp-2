@@ -1,7 +1,7 @@
 <script setup>
 import MainHeading from "./section-components/MainHeading.vue";
 import ImagesGallery from "./section-components/ImagesGallery.vue";
-import VideoSection from "./VideoSection.vue";
+import VideoSection from "./sub-section/portfolio/VideoSection.vue";
 </script>
 
 <template>

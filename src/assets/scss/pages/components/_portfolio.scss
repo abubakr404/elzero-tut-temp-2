@@ -40,12 +40,19 @@
         @extend %aCenter;
         @include circle(5.5rem, 0, $mainColor, rgba($mainColor, 0.7));
         color: $altColor;
-        bottom: 120%;
+        bottom: 100%;
+        transform: translate(50%, -50%);
         font-size: 2rem;
+        @include in(smallMobile) {
+          width: 4.5rem;
+          height: 4.5rem;
+          font-size: 1.5rem;
+        }
       }
       &:hover {
         &::after {
           bottom: calc(50% + 2rem);
+          transform: translate(50%, 50%);
         }
         .caption {
           bottom: 0;
@@ -97,8 +104,15 @@
     background-color: $backgroundColor;
     margin-top: $sectionPadding;
     padding: 0;
+    @extend %fCenter;
+    &::before {
+      content: "";
+      position: absolute;
+      @extend %overlay;
+    }
     video {
       max-width: 100%;
+      min-height: 38.75rem;
     }
     .text {
       @extend %boxCard;
