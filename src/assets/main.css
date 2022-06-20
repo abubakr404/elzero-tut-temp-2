@@ -131,7 +131,7 @@ h2 {
           transform: translateY(50%);
 }
 
-.subscribe form::before, .skills .our-skills .prog span, .statistics .icon::before, .portfolio .video, .portfolio .images-container .box::after, header nav button, .buttons {
+footer ul, footer .social, .subscribe form::before, .skills .our-skills .prog span, .statistics .icon::before, .portfolio .video, .portfolio .images-container .box::after, header nav button, .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,7 +143,7 @@ h2 {
           justify-content: center;
 }
 
-.portfolio .images-container .box::after, .main-heading h2::after,
+footer .social::before, .portfolio .images-container .box::after, .main-heading h2::after,
 .head h2::after {
   position: absolute;
   right: 50%;
@@ -165,7 +165,7 @@ button {
   background-color: transparent;
 }
 
-.subscribe::before, .quote::before, .statistics::before, .portfolio .video::before, .desgin::before, .landing::after {
+footer::before, .subscribe::before, .quote::before, .statistics::before, .portfolio .video::before, .desgin::before, .landing::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -205,7 +205,7 @@ button {
   gap: 2rem;
 }
 
-.subscribe button, .plans a:hover, .plans a:active, .pricing .contact a, .portfolio .video .text a, .portfolio .more, .portfolio .shuffle li.active {
+.contact .content form button, .subscribe button, .plans a:hover, .plans a:active, .pricing .contact a, .portfolio .video .text a, .portfolio .more, .portfolio .shuffle li.active {
   background-color: #2ec5f4;
   color: #ffffff;
 }
@@ -1277,7 +1277,180 @@ section.skills {
   }
 }
 
+.contact .main-heading p {
+  margin-bottom: 0;
+}
+.contact .content {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  -ms-grid-columns: 66.6666666667% 2rem 33.3333333333%;
+  grid-template-columns: 66.6666666667% 33.3333333333%;
+  padding-top: 6.25rem;
+}
+@media (max-width: 991px) {
+  .contact .content {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.contact .content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 2rem;
+}
+.contact .content form .input {
+  padding: 1.5rem 1.25rem;
+  color: #1f2021;
+  border: 1px solid #dbdbdb;
+}
+.contact .content form .input::-webkit-input-placeholder {
+  color: #1f2021;
+  text-transform: uppercase;
+}
+.contact .content form .input::-moz-placeholder {
+  color: #1f2021;
+  text-transform: uppercase;
+}
+.contact .content form .input:-ms-input-placeholder {
+  color: #1f2021;
+  text-transform: uppercase;
+}
+.contact .content form .input::-ms-input-placeholder {
+  color: #1f2021;
+  text-transform: uppercase;
+}
+.contact .content form .input::placeholder {
+  color: #1f2021;
+  text-transform: uppercase;
+}
+.contact .content form textarea {
+  height: 12.5rem;
+}
+.contact .content form button {
+  margin-top: 1.875rem;
+  padding: 1.5rem 2.75rem;
+}
+@media (min-width: 992px) {
+  .contact .content form button {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+.contact .contact-ways {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
+}
+@media (max-width: 991px) {
+  .contact .contact-ways {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+@media (min-width: 992px) {
+  .contact .contact-ways {
+    -ms-grid-rows: 50% 50%;
+    grid-template-rows: 50% 50%;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    height: calc(100% - 7.75rem);
+  }
+  .contact .contact-ways > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .contact .contact-ways > *:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+}
+.contact .contact-ways h4 {
+  color: #1f2021;
+  margin-bottom: 2.625rem;
+}
+.contact .contact-ways a {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+.contact .contact-ways address {
+  font-style: normal;
+}
+
 footer {
-  color: #ffffff;
+  padding: 2.25rem;
   background-color: #1f2021;
+  background-image: url(/src/assets/images/footer.jpg);
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+footer::before {
+  content: "";
+  position: absolute;
+}
+footer .container {
+  padding: 5rem;
+  position: relative;
+}
+footer .social {
+  margin-top: 3.125rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+}
+footer .social::before {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  bottom: 0px;
+  right: 0px;
+  height: 0.0625rem;
+  width: calc(14.375rem - 0px);
+  bottom: 50%;
+  right: 50%;
+}
+footer .social p {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+}
+footer .social a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+footer .social a:hover, footer .social a:focus, footer .social a:active {
+  color: #2ec5f4;
+}
+footer ul {
+  gap: 2rem;
+}
+footer p {
+  position: relative;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+footer p .highlight {
+  color: #2ec5f4;
+}
+@media (max-width: 991px) {
+  footer p {
+    font-size: 0.625rem;
+  }
 }

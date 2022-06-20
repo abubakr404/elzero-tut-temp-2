@@ -2,7 +2,7 @@
   <div class="container">
     <img src="../assets/images/logo.png" alt="logo" />
     <div class="social">
-      <h4>we are social</h4>
+      <p>we are social</p>
       <ul>
         <li>
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -18,8 +18,6 @@
         </li>
       </ul>
     </div>
-    <p>
-      &copy;2014 - <span class="highlight">Kasper</span> All Rights Reserved
-    </p>
   </div>
+  <p>&copy;2014 - <span class="highlight">Kasper</span> All Rights Reserved</p>
 </template>

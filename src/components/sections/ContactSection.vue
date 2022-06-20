@@ -11,38 +11,41 @@ import MainHeading from "./section-components/MainHeading.vue";
       </MainHeading>
       <div class="content">
         <form method="post">
-          <input type="text" :placeholder="placeholder.name" />
-          <input type="email" :placeholder="placeholder.mail" />
-          <textarea :placeholder="placeholder.message"></textarea>
+          <input type="text" class="input" :placeholder="placeholder.name" />
+          <input type="email" class="input" :placeholder="placeholder.mail" />
+          <textarea class="input" :placeholder="placeholder.message"></textarea>
           <button type="submit" v-text="buttonTitle"></button>
         </form>
         <div class="contact-ways">
           <div class="way">
             <h4>get in touch</h4>
-            <p
+            <a
               v-for="(phone, index) in contact.phones"
+              :href="`tel:${phone}`"
               :key="index"
               v-text="phone"
-            ></p>
+            ></a>
           </div>
           <div class="way">
             <h4>where we are</h4>
-            <p
-              v-if="contact.address.street != null"
-              v-text="contact.address.street"
-            ></p>
-            <p
-              v-if="contact.address.city != null"
-              v-text="contact.address.city"
-            ></p>
-            <p
-              v-if="contact.address.phone != null"
-              v-text="contact.address.phone"
-            ></p>
-            <p
-              v-if="contact.address.country != null"
-              v-text="contact.address.country"
-            ></p>
+            <address>
+              <p
+                v-if="contact.address.street != null"
+                v-text="contact.address.street"
+              ></p>
+              <p
+                v-if="contact.address.city != null"
+                v-text="contact.address.city"
+              ></p>
+              <p
+                v-if="contact.address.phone != null"
+                v-text="contact.address.phone"
+              ></p>
+              <p
+                v-if="contact.address.country != null"
+                v-text="contact.address.country"
+              ></p>
+            </address>
           </div>
         </div>
       </div>
