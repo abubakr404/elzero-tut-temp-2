@@ -1,6 +1,6 @@
 <template>
   <section :class="heading.name" :id="heading.name">
-    <video autoplay muted loop>
+    <video muted loop controls>
       <source src="../../../../assets/images/place-holder.mov" />
     </video>
     <div class="text">

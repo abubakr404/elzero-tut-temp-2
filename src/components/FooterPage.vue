@@ -1,34 +1,25 @@
 <template>
   <div class="container">
-    <ul>
-      <li><img src="../assets/images/logo.png" alt="logo" /></li>
-      <li>
-        Product
-        <ul>
-          <li><button>Overview</button></li>
-          <li><button>Pricing</button></li>
-          <li><button>Marketplace</button></li>
-          <li><button>Features</button></li>
-          <li><button>Integrations</button></li>
-        </ul>
-      </li>
-      <li>
-        Company
-        <ul>
-          <li><button>About</button></li>
-          <li><button>Team</button></li>
-          <li><button>Blog</button></li>
-          <li><button>Careers</button></li>
-        </ul>
-      </li>
-      <li>
-        Connect
-        <ul>
-          <li><button>Contact</button></li>
-          <li><button>Newsletter</button></li>
-          <li><button>LinkedIn</button></li>
-        </ul>
-      </li>
-    </ul>
+    <img src="../assets/images/logo.png" alt="logo" />
+    <div class="social">
+      <h4>we are social</h4>
+      <ul>
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+        </li>
+      </ul>
+    </div>
+    <p>
+      &copy;2014 - <span class="highlight">Kasper</span> All Rights Reserved
+    </p>
   </div>
 </template>
