@@ -1,8 +1,13 @@
+<script setup>
+const getImageUrl = (name) => {
+  return new URL(`../../assets/images/${name}`, import.meta.url).href;
+};
+</script>
 <template>
   <section
     :class="heading.name"
     id="home"
-    :style="'background-image:url(/src/assets/images/' + activeImg.name + ')'"
+    :style="`background-image:url(${getImageUrl(activeImg.name)})`"
   >
     <div class="text">
       <div class="content">

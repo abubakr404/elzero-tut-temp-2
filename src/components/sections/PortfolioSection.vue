@@ -2,6 +2,9 @@
 import MainHeading from "./section-components/MainHeading.vue";
 import ImagesGallery from "./section-components/ImagesGallery.vue";
 import VideoSection from "./sub-section/portfolio/VideoSection.vue";
+const getImageUrl = (name) => {
+  return new URL(`../../assets/images/${name}`, import.meta.url).href;
+};
 </script>
 
 <template>
@@ -23,7 +26,7 @@ import VideoSection from "./sub-section/portfolio/VideoSection.vue";
     </div>
     <div class="images-container">
       <ImagesGallery v-for="(work, index) in worksSelected" :key="index">
-        <img :src="`src/assets/images/${work.imgName}`" alt="our work" />
+        <img :src="getImageUrl(work.imgName)" alt="our work" />
         <template #work-title>{{ work.title }}</template>
         <template #work-category>{{ work.category }}</template>
       </ImagesGallery>
@@ -112,6 +115,10 @@ export default {
     worksSelected() {
       return this.filtered == null ? this.works : this.filtered;
     },
+    // imagePath() {
+    //   // eslint-disable-next-line no-undef
+    //   return require(`@/assets/images/`);
+    // },
   },
 };
 </script>

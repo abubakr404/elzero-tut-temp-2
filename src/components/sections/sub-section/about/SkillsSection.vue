@@ -1,3 +1,8 @@
+<script setup>
+const getImageUrl = (name) => {
+  return new URL(`../../../../assets/images/${name}`, import.meta.url).href;
+};
+</script>
 <template>
   <section :class="heading.name" :id="heading.name">
     <div class="container">
@@ -7,10 +12,7 @@
           <p v-text="sections[0].text"></p>
         </div>
         <div class="client" v-for="(client, index) in clients" :key="index">
-          <img
-            :src="`src/assets/images/${client.imgName}`"
-            alt="client-avatar"
-          />
+          <img :src="getImageUrl(client.imgName)" alt="client-avatar" />
           <div class="comment">
             <p v-text="client.comment"></p>
             <p v-text="client.name"></p>

@@ -1,7 +1,7 @@
 <template>
   <section :class="heading.name" :id="heading.name">
     <video muted loop controls>
-      <source src="../../../../assets/images/place-holder.mov" />
+      <source src="../../../../assets/images/video.mp4" type="video/mp4" />
     </video>
     <div class="text">
       <h3 v-text="heading.title"></h3>
